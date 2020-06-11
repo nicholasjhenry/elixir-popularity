@@ -1,5 +1,5 @@
 container.up:
-  docker-compose -d up
+	docker-compose -d up
 
 container.stop:
-  docker-compose stop
+	docker-compose stop
