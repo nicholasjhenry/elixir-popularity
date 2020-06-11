@@ -23,4 +23,4 @@ erl_crash.dump
 elixir_popularity-*.tar
 
 temp
-
+log
