@@ -8,7 +8,11 @@ defmodule ElixirPopularity.Application do
   def start(_type, _args) do
     children = [
       :hackney_pool.child_spec(:hn_id_pool, timeout: 15000, max_connections: 100),
-      ElixirPopularity.Repo
+      ElixirPopularity.Repo,
+      %{
+        id: ElixirPopularity.RMQPublisher,
+        start: {ElixirPopularity.RMQPublisher, :start_link, []}
+      }
       # Starts a worker by calling: ElixirPopularity.Worker.start_link(arg)
       # {ElixirPopularity.Worker, arg}
     ]
