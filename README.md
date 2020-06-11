@@ -1,21 +1,20 @@
-# ElixirPopularity
+# Broadway, RabbitMQ, and the Rise of Elixir
 
-**TODO: Add description**
+Based on the series:
 
-## Installation
+1. https://akoutmos.com/post/broadway-rabbitmq-and-the-rise-of-elixir/
+2. https://akoutmos.com/post/broadway-rabbitmq-and-the-rise-of-elixir-two/
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_popularity` to your list of dependencies in `mix.exs`:
+Setup:
 
-```elixir
-def deps do
-  [
-    {:elixir_popularity, "~> 0.1.0"}
-  ]
-end
-```
+    make container.up
+    mix setup
+    iex -S mix
+    ElixirPopularity.HackerNewsIdGenerator.start_generating()
+    # 12 hours later...
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_popularity](https://hexdocs.pm/elixir_popularity).
+Notes:
+
+- RabbitMQ Admin: http://localhost:15672 (rabbitmq/rabbitmq)
+- Grafana: ?
 

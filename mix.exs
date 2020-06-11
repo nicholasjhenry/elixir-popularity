@@ -7,7 +7,8 @@ defmodule ElixirPopularity.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
@@ -30,5 +31,9 @@ defmodule ElixirPopularity.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:gen_rmq, "~> 2.6.0"}
     ]
+  end
+
+  defp aliases do
+    [setup: ["deps.get", "ecto.create", "ecto.migrate"]]
   end
 end
