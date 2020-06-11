@@ -28,7 +28,8 @@ defmodule ElixirPopularity.Application do
            ]},
         restart: :transient
       },
-      ElixirPopularity.HackernewsIdProcessor
+      ElixirPopularity.HackernewsIdProcessor,
+      ElixirPopularity.HackernewsPayloadProcessor
       # Starts a worker by calling: ElixirPopularity.Worker.start_link(arg)
       # {ElixirPopularity.Worker, arg}
     ]
